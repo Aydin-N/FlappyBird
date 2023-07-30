@@ -1,0 +1,203 @@
+@font-face {
+  font-family: Visitor;
+  src: url("./assets/visitor/visitor1.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Visitor, monospace;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  background-color: rgb(60,60,60);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Score Table Styling */
+#scoreTable {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  padding: 0 20px 0 30px;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  translate: 100% 0%;
+  box-shadow: 5px 5px 5px black;
+}
+
+#score {
+  font-size: 50px;
+  color: white;
+}
+
+/* Main Menu */
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  background: url(./assets/game_objects/Flappy\ Bird\ -\ Cover\ Page.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#title {
+  color: white;
+  margin: 70px;
+  font-size: 80px;
+  text-shadow: 3px 3px black;
+  transition: 0.2s;
+  cursor: default;
+}
+#title:hover {
+  letter-spacing: 4px;
+}
+.wrapper a {
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 25px;
+  transition: 0.2s;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.wrapper a:hover {
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 2px black;
+}
+.wrapper a:active{
+  color: yellow;
+}
+
+/* Launch Game by clicking */
+#startGame {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.4);
+}
+#startGame span{
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 1px;
+  animation: blinking 0.8s linear infinite;
+}
+@keyframes blinking {
+  0%{
+    opacity: 1.0;
+  }
+  50%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1.0;
+  }
+}
+
+/* Game Over Page */
+#gameOverPage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.4);
+  z-index: 150;
+}
+#gameOverPage a {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 20px;
+  transition: 0.2s;
+  text-shadow: 2px 2px black;
+}
+#gameOverPage a:hover {
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 2px black;
+}
+#gameOverPage a:active{
+  color: yellow;
+}
+#gameOverText {
+  color: white;
+  padding: 30px;
+  text-shadow: 3px 3px black;
+}
+#gameOverScore {
+  margin-bottom: 30px;
+  display: flex;
+}
+#gameOverScore img {
+  -webkit-user-drag: none;
+  display: inline-block;
+  margin: 7px;
+  scale: 2.0;
+}
+
+/* Options Box */
+#optionsBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 300;
+  width: 30%;
+  aspect-ratio: 2 / 3;
+  background-color: rgb(146, 204, 92);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border: 5px solid rgb(17, 40, 12);
+  box-shadow: 10px 10px 10px rgb(59, 58, 58);
+}
+#optionsBox h1{
+  color: white;
+  text-shadow: 3px 3px black;
+}
+#optionsBox a {
+  color: white;
+  text-shadow: 2px 2px black;
+  padding: 5px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#optionsBox a:hover {
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 2px black;
+}
+#optionsBox a:active{
+  color: yellow;
+}

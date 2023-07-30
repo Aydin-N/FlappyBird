@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird | AR Project</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Launch Game by clicking -->
+    <div id="startGame">
+      <span>Click anywhere to start!</span>
+    </div>
+
+    <!-- Show score when the game is over -->
+    <div id="gameOverPage">
+      <h1 id="gameOverText"></h1>
+      <div id="gameOverScore">
+      </div>
+      <a id="restart">Restart [r]</a>
+      <a id="endMenuOptions">Options [o]</a>
+    </div>
+
+    <!-- Main Menu -->
+    <div class="wrapper" id="wrapper">
+      <h1 id="title">Flappy Bird</h1>
+      <a id="start">Start a game</a>
+      <a id="menuOptions">Options</a>
+    </div>
+
+    <!-- Options -->
+    <div id="optionsBox">
+      <h1>Options</h1>
+      <a id="easy">Easy</a>
+      <a id="normal">Normal</a>
+      <a id="hard">Hard</a>
+      <a id="back">Back to Menu</a>
+    </div>
+
+    <!-- Score table -->
+    <div id="scoreTable">
+      <span id="score">0</span>
+    </div>
+
+    <!-- And here is our canvas -->
+    <canvas></canvas>
+  </div>
+</body>
+</html>
